@@ -15,19 +15,23 @@ import { AppRoutes } from './app.routing';
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import { HttpClientModule } from '@angular/common/http';
 
+import { LoginComponent } from './pages/login/login.component';
 
+
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     AdminLayoutComponent,
-   
+    LoginComponent
   
     
     
   ],
   
   imports: [
+    FormsModule, ReactiveFormsModule,
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,

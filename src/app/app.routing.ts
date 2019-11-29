@@ -2,9 +2,21 @@ import { Routes } from '@angular/router';
 
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 
+import { LoginComponent } from './pages/login/login.component';
+
 export const AppRoutes: Routes = [
+
   {
     path: '',
+    redirectTo: 'login',
+    pathMatch: 'full',
+  },
+ {
+    path: '',
+    component: LoginComponent,
+    },
+  {
+    path: '**',
     redirectTo: 'dashboard',
     pathMatch: 'full',
   }, {

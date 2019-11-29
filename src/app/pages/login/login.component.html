@@ -1,0 +1,56 @@
+
+<body style="background-image: url(http://www.vking-argentina.com/img/fondo_clientes.png);  background-position: center;
+background-size: cover;
+background-repeat: no-repeat;
+min-height: 100vh;
+font-family: 'Roboto', sans-serif;">
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <div class="fadeIn first">
+      <br>
+        <img style="height: 120px;" src="./assets/img/logo-small.png">
+      <h3>Login</h3>
+    </div>
+
+    <!-- Login Form -->
+      <form >
+        <div class="form-group">
+                <input type="text" formControlName="usuario" class="form-control"  />
+                <div>
+                    <div *ngIf="f.usuario.errors.required">Por favor, ingresa tu Nombre de Usuario</div>
+                </div>
+            </div>   
+            <div class="form-group">
+                <input type="password" formControlName="password" class="form-control input" placeholder="Ingrese contraseña" />
+                <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                    <div *ngIf="f.password.errors.required">Por favor, ingresa tu Contraseña</div>
+                </div>
+            </div>   
+           
+            <div class="form-group">
+                <button class="btn btn-primary" (click)="postLogin()" >Ingresar</button>
+            </div>
+
+      <div class="modal-body">
+        <div class="box">
+             <div class="content">
+                <div class="social">
+                    <a class="underlineHover">Redes Sociales</a>
+                    <br>
+                    <a id="google_login" class="circle google" href="https://accounts.google.com/ServiceLogin/signinchooser?hl=es-419&passive=true&continue=https%3A%2F%2Fwww.google.com%2Fsearch%3Fclient%3Dfirefox-b-d%26q%3Dgmail&flowName=GlifWebSignIn&flowEntry=ServiceLogin">
+                      <i class="fa fa-google-plus fa-fw"></i>
+                  </a><a class="circle github" href="https://github.com/login">
+                        <i class="fa fa-github fa-fw"></i>
+                    </a>
+                  <a id="facebook_login" class="circle facebook" href="https://es-la.facebook.com/">
+                      <i class="fa fa-facebook fa-fw"></i>
+                  </a>
+                 
+                </div>
+             </div>
+        </div>
+    </div>
+    </form>
+  </div>
+</div>
+</body>

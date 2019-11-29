@@ -87,10 +87,10 @@ export class UserComponent implements OnInit{
       let postUser = {
         'id': this.user.id,
         'userName': this.user.userName,
-        'Name': this.user.name,
+        'firstName': this.user.firstName,
+        'email': this.user.email,
         'lastName': this.user.lastName,
-        'Age': this.user.age,
-        'lastSessionDateTime': '2019-08-05T15:02:29.393'
+        'birthdate': this.user.birthdate
       };
   
       this.globalService.updateModel(this.user.id,postUser, "/users").then(
@@ -112,11 +112,12 @@ export class UserComponent implements OnInit{
       console.log(this.user)
       
       let postUser = {
+        'id': this.user.id,
         'userName': this.user.userName,
-        'Name': this.user.name,
+        'firstName': this.user.firstName,
+        'email': this.user.email,
         'lastName': this.user.lastName,
-        'Age': this.user.age,
-        'lastSessionDateTime': '2019-08-05T15:02:29.393'
+        'birthdate': this.user.birthdate
       };
   
       this.globalService.addModel(postUser, "/users").then(
