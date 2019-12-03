@@ -1,0 +1,50 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+<body style="background-image: url(https://images.unsplash.com/photo-1487284122274-e864e9dec2bf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=751&q=80);  background-position: center;
+background-size: cover;
+background-repeat: no-repeat;
+min-height: 100vh;
+font-family: 'Roboto', sans-serif;">
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <!-- Tabs Titles -->
+
+    <!-- Icon -->
+    <div class="fadeIn first">
+      <br>
+        <img style="height: 120px;" src=".\assets\img\logo2.png">
+      <h3>Register</h3>
+    </div>
+
+    <!-- Login Form -->
+    <form class="text-center">
+      <input type="text" id="login" class="fadeIn second" name="login" placeholder="Usuario"  [(ngModel)]="users.user_name">
+      <input type="text" id="password" class="fadeIn third" name="login" placeholder="Contraseña"  [(ngModel)]="users.user_password">
+      
+      <!-- <div  class="text-center ">
+        <select class="form-control" name="role_id"  [(ngModel)]="users.role_id" [ngModelOptions]="{standalone: true}">
+          <option   *ngFor="let item of roleList; let i = index" [ngValue]="item.role_id" >
+             {{roleList[i].role_name}}
+           </option>
+          </select>                                    
+       </div>   -->
+       <br>
+      <input type="submit" (click)='saveUsers()' class="fadeIn fourth" value="Registrar">
+
+
+      <div class="modal-body">
+        <div class="box">
+             <div class="content">
+                <div class="social">
+                  <a class="underlineHover" href="#">LogIn</a>
+                </div>
+             </div>
+        </div>
+    </div>
+    </form>
+
+  </div>
+</div>
+</body>

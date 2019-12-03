@@ -4,8 +4,11 @@ import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.compon
 
 import { LoginComponent } from './pages/login/login.component';
 
-export const AppRoutes: Routes = [
+import {RegisterComponent} from './pages/register/register.component'
 
+export const AppRoutes: Routes =  [
+
+  { path: 'register', component: RegisterComponent },
   {
     path: '',
     redirectTo: 'login',
@@ -16,10 +19,6 @@ export const AppRoutes: Routes = [
     component: LoginComponent,
     },
   {
-    path: '**',
-    redirectTo: 'dashboard',
-    pathMatch: 'full',
-  }, {
     path: '',
     component: AdminLayoutComponent,
     children: [
@@ -30,5 +29,7 @@ export const AppRoutes: Routes = [
   {
     path: '**',
     redirectTo: 'dashboard'
-  }
+  },
+
+
 ]
